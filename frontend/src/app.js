@@ -12,12 +12,12 @@ export function init() {
 
   DataTransaction.forEach( (transaction, index) => {
     CreateElementTrasaction(transaction, index);
-    document.getElementById('r').addEventListener('click', function(index){
-      Remove(index); 
-    })
-    
-  });
 
+    return index;
+  });
+  document.getElementById('r').addEventListener('click', function(transaction, index){
+    Remove(index)
+  });
 
   UpdateSaldos();
   SetStorage(DataTransaction);
