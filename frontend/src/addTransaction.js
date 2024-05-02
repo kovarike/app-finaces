@@ -9,8 +9,10 @@ export function Add(saldo){
 };
 
 
-export function remove(index){
+export function Remove(index){
   DataTransaction.splice(index, 1);
-  reload()
-}
+  reload();
 
+
+  
+}

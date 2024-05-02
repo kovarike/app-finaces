@@ -1,13 +1,14 @@
+import { Remove } from "./addTransaction.js";
+import DataTransaction from "./dataTransaction.js";
 import FormatCurrencyMoney from "./formstCurrencyMoney.js";
 
-
 const Tbody = document.querySelector('#data tbody');
-export default function CreateElementTrasaction(transaction){
+export default function CreateElementTrasaction(transaction, index){
 
   const tr = document.createElement('tr');
-  tr.innerHTML = innerHTMLTransaction(transaction);
+  tr.innerHTML = innerHTMLTransaction(transaction, index);
+  tr.dataset.index = index;
   Tbody.appendChild(tr);
-
 
 };
 
@@ -17,11 +18,10 @@ export function ClearTransaction(){
 
 
 
-
-export function innerHTMLTransaction(transaction){
-
+export function innerHTMLTransaction(transaction, index){
   const cssClass = transaction.money > 0 ? "entrada-coin" : "saida-coin";
   const currencyMoney = FormatCurrencyMoney(transaction.money);
+
 
   const html = `
     
@@ -29,12 +29,13 @@ export function innerHTMLTransaction(transaction){
       <td class="${cssClass}">${currencyMoney}</td>
       <td class="date">${transaction.date}</td>
 
-      <td>
-          <img src="./src/public/minus.svg" alt="miuns">
+      <td >
+          <img id="r" src="./src/public/minus.svg" alt="miuns">
       </td>
     
    
   `;
+
 
   return html;
 }

@@ -1,5 +1,6 @@
 import { DataBase } from "./base/dataBase.js";
 import { FormatDate, FormatMoney } from "./formstCurrencyMoney.js";
+import { Close } from "./modal.js";
 
 
 const description = document.getElementById('description');
@@ -50,6 +51,7 @@ function Submit(event){
     const ValueForm = FormatData();
     DataBase(ValueForm);
     RemoveData();
+    Close();
     
   } catch (error) {
     alert(error.message);
@@ -60,5 +62,9 @@ function Submit(event){
 }
 
 
-document.querySelector("#F").addEventListener("submit", () => Submit(event))
+document.querySelector("#F").addEventListener("submit", function (event) {
+  
+  event.preventDefault();
+  Submit(event)
+})
 
