@@ -1,9 +1,5 @@
-import { Add } from "./addTransaction.js";
+import { DataBase } from "./base/dataBase.js";
 import { FormatDate, FormatMoney } from "./formstCurrencyMoney.js";
-
-
-
-
 
 
 const description = document.getElementById('description');
@@ -46,13 +42,13 @@ function RemoveData() {
 
 
 function Submit(event){
-  console.log(event)
+
 
   event.preventDefault();
   try {
     ValidateForm();
     const ValueForm = FormatData();
-    Add(ValueForm);
+    DataBase(ValueForm);
     RemoveData();
     
   } catch (error) {
