@@ -1,5 +1,3 @@
-import { Remove } from "./addTransaction.js";
-import DataTransaction from "./dataTransaction.js";
 import FormatCurrencyMoney from "./formstCurrencyMoney.js";
 
 const Tbody = document.querySelector('#data tbody');

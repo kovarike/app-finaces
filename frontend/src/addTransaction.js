@@ -13,6 +13,4 @@ export function Remove(index){
   DataTransaction.splice(index, 1);
   reload();
 
-
-  
 }
