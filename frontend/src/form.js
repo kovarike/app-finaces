@@ -64,5 +64,5 @@ function Submit(event){
 }
 
 
-
+document.querySelector("#F").addEventListener("submit", () => Submit(event))
 
