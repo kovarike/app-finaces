@@ -9,12 +9,11 @@ import UpdateSaldos from "./updateSaldos.js";
 export function init() {
 
   DataTransaction.forEach( (transaction, index) => {
-    CreateElementTrasaction(transaction, index);
-    document.getElementById('r').addEventListener('click', (transaction, index) => {
-   
-      Remove(transaction, index);
-      
+    const tr = CreateElementTrasaction(transaction, index);
+    tr.querySelector('.rm').addEventListener('click', () => {
+      Remove(index);
     });
+  
   });
 
   

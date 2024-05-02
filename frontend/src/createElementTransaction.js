@@ -7,6 +7,7 @@ export default function CreateElementTrasaction(transaction, index){
   tr.innerHTML = innerHTMLTransaction(transaction, index);
   tr.dataset.index = index;
   Tbody.appendChild(tr);
+  return tr;
 
 };
 
@@ -26,7 +27,7 @@ export function innerHTMLTransaction(transaction, index){
       <td class="date">${transaction.date}</td>
 
       <td >
-          <img id="r" src="./src/public/minus.svg" alt="miuns">
+          <img class="rm" src="./src/public/minus.svg" alt="miuns">
       </td>
     
    
