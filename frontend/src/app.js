@@ -6,28 +6,31 @@ import UpdateSaldos from "./updateSaldos.js";
 
 
 
-
-
 export function init() {
 
   DataTransaction.forEach( (transaction, index) => {
     CreateElementTrasaction(transaction, index);
-    document.getElementById('r').addEventListener('click', function(transaction, index){
-      Remove(index)
+    document.getElementById('r').addEventListener('click', (transaction, index) => {
+   
+      Remove(transaction, index);
+      
     });
-    
   });
 
+  
 
-  UpdateSaldos();
+
   SetStorage(DataTransaction);
+  UpdateSaldos();
 
 
-}
+};
+
 export function reload() {
   ClearTransaction();
   init();
-}
+
+};
 
 init();
 

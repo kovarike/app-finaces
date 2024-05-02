@@ -15,11 +15,9 @@ export function ClearTransaction(){
 }
 
 
-
 export function innerHTMLTransaction(transaction, index){
   const cssClass = transaction.money > 0 ? "entrada-coin" : "saida-coin";
   const currencyMoney = FormatCurrencyMoney(transaction.money);
-
 
   const html = `
     
