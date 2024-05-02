@@ -21,7 +21,7 @@
                     <span>Entrada</span>
                     <img src="./src/public/income.svg" alt="Entrada">
                 </h3>
-                <p>R$ 3000,00</p>
+                <p id="entrada"></p>
             </div>
 
             <div class="cards">
@@ -29,7 +29,7 @@
                     <span>Saida</span>
                     <img src="./src/public/expense.svg" alt="Saida">
                 </h3>
-                <p>R$ -2000,00</p>
+                <p id="saida"></p>
 
             </div>
 
@@ -38,7 +38,7 @@
                     <span>Total</span>
                     <img src="./src/public/total.svg" alt="Total">
                 </h3>
-                <p>R$ 1000,00</p>
+                <p id="total"></p>
             </div>
 
         </section>
@@ -46,7 +46,7 @@
         <section id="transação">
             <h2 class="sr-only">Transações</h2>
 
-            <a href="#" onclick="Modal.open()" class="button new">Nova Transação</a>
+            <a href="#" onclick="Open()" class="button new">Nova Transação</a>
 
             <table id="data">
                 <thead>
@@ -59,27 +59,6 @@
                 </thead>
 
                 <tbody>
-                    <tr>
-                        <td class="descrição">Fatura</td>
-                        <td class="saida-coin">R$ -2000,00</td>
-                        <td class="date">29/04/2024</td>
-
-                        <td>
-                            <img src="./src/public/minus.svg" alt="miuns">
-                        </td>
-                        
-                    </tr>
-
-                    <tr>
-                        <td class="descrição">Fatura</td>
-                        <td class="entrada-coin">R$ 2000,00</td>
-                        <td class="date">29/04/2024</td>
-
-                        <td>
-                            <img src="./src/public/minus.svg" alt="minus">
-                        </td>
-
-                    </tr>
 
                 </tbody>
 
@@ -92,7 +71,7 @@
         <div class="modal">
             <div id="form">
                 <h2>Nova Transação</h2>
-                <form action="">
+                <form action="" id="F" >
                     <div class="input-group">
                         <label class="sr-only" for="description">Descrição</label>
                         <input type="text" id="description"name="description" placeholder="Descrição"/>
@@ -110,8 +89,8 @@
                     </div>
 
                     <div class="input-group actions">
-                        <a href="#" onclick="Modal.close()" class="button cancel">Cancelar</a>
-                        <button type="submit">Salvar</button>
+                        <a href="#" onclick="Close()" class="button cancel">Cancelar</a>
+                        <button type="submit" id="B">Salvar</button>
                     </div>
 
                 </form>
@@ -122,8 +101,13 @@
      <footer><p><img src="./src/public/logo.svg" alt="logo">Finaces</p></footer>
 
 
+        <script src="./src/modal.js"></script>
+        <script type="module" src="./src/form.js">
+            
 
-        <script src="./src/index.js"></script>
+        </script>
+        <script type="module" src="./src/app.js"></script>
+
     </body>
 
 </html>
