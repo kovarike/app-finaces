@@ -14,6 +14,7 @@
     --titulo: #363F5F;
     --texto: #969CB2;
     --red:  #E92929;
+    --green-a: #3dd705;
 }
 html{
     font-family: 'Poppins', sans-serif;
@@ -61,6 +62,27 @@ header{
     text-align: center;
 
 }
+#button-calc{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#button-calc a {
+    margin-right: -75rem;
+    color: var(--branco);
+    transition: 0.9s;
+    opacity: 0.4;
+
+    border: 1px solid var(--green-a);
+    padding: 1.5rem 2rem;
+    border-radius: 50rem;
+}
+#button-calc a:hover{
+    opacity: 1;
+    background: rgb(111, 224, 66);
+
+} 
+
 
 header h1{
     font-weight: 100;
@@ -175,9 +197,9 @@ a:hover{
     align-items: center;
     justify-content: center;
     transition: 0.9s;
+    opacity: 0.6;
     border: 1px solid var(--red);
     border-radius: 0.25rem;
-    opacity: 0.6;
     height: 50px;
 
 }
@@ -239,7 +261,31 @@ td.entrada-coin{
 
 
 }
+
+.calc{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+    position: fixed;
+    top: 0;
+    transition: 0.9s;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+
+
+
+}
+
 .modal-overlay.active{
+
+    opacity: 1;
+    visibility: visible;
+}
+.calc.active{
 
     opacity: 1;
     visibility: visible;

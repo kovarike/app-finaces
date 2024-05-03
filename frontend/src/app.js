@@ -6,7 +6,7 @@ import UpdateSaldos from "./updateSaldos.js";
 
 
 
-export function init() {
+export async function init() {
 
   DataTransaction.forEach( (transaction, index) => {
     const tr = CreateElementTrasaction(transaction, index);
@@ -31,6 +31,6 @@ export function reload() {
 
 };
 
-init();
+await init();
 
 

@@ -11,3 +11,17 @@ export function Close(){
 };
 document.getElementById('close').addEventListener("click", () => Close())
 
+
+
+
+
+
+export function OpenCalc() {
+    document.querySelector('.calc').classList.add('active');
+}
+document.getElementById('calc').addEventListener('click', () => OpenCalc());
+
+export function CloseCalc(){
+    document.querySelector('.calc').classList.remove('active');
+};
+document.getElementById('close-calc').addEventListener("click", () => CloseCalc());
