@@ -14,7 +14,7 @@
      <header>
         <h1 id="logo"><img src="./src/public/logo.svg" alt="logo">Finaces</h1>
         <div id="button-calc">
-            <a href="#" id="calc">Calculadora</a>
+            <a href="#" id="calc"><img src="./src/public/calcu.svg" alt="calc"></a>
         </div>
      </header>
         <div class="calc">
@@ -27,29 +27,11 @@
         </div>
      <main id="gap">
         <section id="saldo">
-            <h2 class="sr-only">Saldo</h2>
 
             <div class="cards">
                 <h3>
-                    <span>Entrada</span>
-                    <img src="./src/public/income.svg" alt="Entrada">
-                </h3>
-                <p id="entrada"></p>
-            </div>
-
-            <div class="cards">
-                <h3>
-                    <span>Saida</span>
-                    <img src="./src/public/expense.svg" alt="Saida">
-                </h3>
-                <p id="saida"></p>
-
-            </div>
-
-            <div class="cards total">
-                <h3>
-                    <span>Total</span>
-                    <img src="./src/public/total.svg" alt="Total">
+                    <span>Saldo</span>
+                    <img src="./src/public/dola.svg" alt="Total">
                 </h3>
                 <p id="total"></p>
             </div>
@@ -59,7 +41,13 @@
         <section id="transação">
             <h2 class="sr-only">Transações</h2>
 
-            <a href="#" id="open" class="button new">Nova Transação</a>
+            <div id="buttons-add-remove">
+                <a href="#" id="open" class="button new"><img src="./src/public/add.svg" alt="added"></a>
+                <a href="#"><img class="rm" for="indexRemove" src="./src/public/remove.svg" alt="remove"></a>
+            </div>
+
+
+
  
             <table id="data">
                 <thead>
@@ -67,7 +55,7 @@
                         <th>Descrição</th>
                         <th>Valor</th>
                         <th>Data</th>
-                        <th></th>
+
                     </tr>
                 </thead>
 
@@ -87,7 +75,7 @@
                 <form action="" id="F" >
                     <div class="input-group">
                         <label class="sr-only" for="description">Descrição</label>
-                        <input type="text" id="description"name="description" placeholder="Descrição"/>
+                        <input type="text" id="description"name="description" placeholder="Descrição" maxlength="15"/>
                     </div>
 
                     <div class="input-group">
@@ -119,3 +107,5 @@
     </body>
 
 </html>
+
+

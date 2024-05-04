@@ -10,11 +10,36 @@ export async function init() {
 
   DataTransaction.forEach( (transaction, index) => {
     const tr = CreateElementTrasaction(transaction, index);
-    tr.querySelector('.rm').addEventListener('click', () => {
-      Remove(index);
+    document.querySelector('.rm').addEventListener('click', () => {
+      let check = tr.querySelector('.check');
+
+      if(check.checked) {
+        Remove(check.value);
+        
+      } 
+
+
     });
   
   });
+  /*
+      document.querySelector('.rm').addEventListener('click', () => {
+              check.value.map(remove => remove.value)
+      Remove(index);
+       else {
+        console.log("O cliente não marcou o checkbox");
+      }
+
+
+
+
+            check.value.forEach( (value) => {
+
+      })
+
+      console.log(check.value)
+    });
+    */
 
   
 

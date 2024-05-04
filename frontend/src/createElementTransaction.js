@@ -22,16 +22,15 @@ export function innerHTMLTransaction(transaction, index){
 
   const html = `
     
-      <td class="descrição">${transaction.description}</td>
+      <td class="descrição">
+       <input class="check" type="checkbox" value="${index}" />
+
+       ${transaction.description}
+      </td>
       <td class="${cssClass}">${currencyMoney}</td>
       <td class="date">${transaction.date}</td>
-
-      <td >
-          <img class="rm" src="./src/public/minus.svg" alt="miuns">
-      </td>
-    
-   
   `;
+
 
 
   return html;
