@@ -21,15 +21,17 @@ export function innerHTMLTransaction(transaction, index){
   const currencyMoney = FormatCurrencyMoney(transaction.money);
 
   const html = `
-    
-      <td class="descrição">
-       <input class="check" type="checkbox" value="${index}" />
-
-       ${transaction.description}
-      </td>
-      <td class="${cssClass}">${currencyMoney}</td>
-      <td class="date">${transaction.date}</td>
+    <td class="descrição">
+        <input class="check" id="${index}" data-index="${index}" type="checkbox" />
+        ${transaction.description}
+    </td>
+    <td class="${cssClass}">${currencyMoney}</td>
+    <td class="date">${transaction.date}</td>
   `;
+  
+  
+
+
 
 
 

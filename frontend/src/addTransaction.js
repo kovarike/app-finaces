@@ -11,6 +11,7 @@ export function Add(saldo){
 
 export function Remove(index){
   DataTransaction.splice(index, 1);
+
   reload();
 
 }

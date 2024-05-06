@@ -6,56 +6,94 @@ import UpdateSaldos from "./updateSaldos.js";
 
 
 
-export async function init() {
-
-  DataTransaction.forEach( (transaction, index) => {
-    const tr = CreateElementTrasaction(transaction, index);
-    document.querySelector('.rm').addEventListener('click', () => {
-      let check = tr.querySelector('.check');
-
-      if(check.checked) {
-        Remove(check.value);
-        
-      } 
-
-
-    });
+export function init() {
   
+
+
+  DataTransaction.forEach((transaction, index) => {
+    CreateElementTrasaction(transaction, index);
+
+    
   });
-  /*
-      document.querySelector('.rm').addEventListener('click', () => {
-              check.value.map(remove => remove.value)
-      Remove(index);
-       else {
-        console.log("O cliente não marcou o checkbox");
-      }
-
-
-
-
-            check.value.forEach( (value) => {
-
-      })
-
-      console.log(check.value)
-    });
-    */
-
+  document.querySelector(".rm").addEventListener("click", () => {
+    const checkboxes = document.querySelectorAll(".check:checked");
+    
+    /*if (DataTransaction < 0) {
+      alert("Selecione pelo menos uma transação para excluir");
+      
+    }*/
+    
+    //const d = DataTransaction.filter((_, index) => !indicesToRemove.includes(index));
+    //Remove(d)
+    
+    let d;
   
+    checkboxes.forEach((checkbox, index) => {
+      const tr = checkbox.closest("tr");
+      
+      //console.log(tr.dataset.index);
+      d = DataTransaction.filter((_, indexAA) => indexAA != tr.dataset.index);
+      tr.remove();
+      Remove(d)
+    });
+  
+    
+    
+  
+    UpdateSaldos();
+    
+  });
 
 
-  SetStorage(DataTransaction);
+
+
+
+  /*
+  document.getElementById('rm').addEventListener('click', () => {
+    const checkboxes = document.querySelectorAll('.check:checked');
+    const indicesToRemove = Array.from(checkboxes).map(checkbox => parseInt(checkbox.dataset.index));
+    const d = DataTransaction.filter((_, index) => !indicesToRemove.includes(index));
+    
+    //if(checkboxes.length == 0) return 
+    checkboxes.forEach((checkbox) => {
+      const tr = checkbox.closest("tr");
+      tr.remove(d);
+      
+      UpdateSaldos();
+    });
+
+    
+    
+    
+    
+    
+  });
+  */
+  SetStorage(DataTransaction)
   UpdateSaldos();
 
+  
+  
 
 };
 
+
+
+
+  
+
+
+
+
+
 export function reload() {
+  
+
   ClearTransaction();
   init();
 
 };
 
-await init();
+init();
 
 
