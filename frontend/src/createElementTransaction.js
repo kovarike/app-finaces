@@ -22,11 +22,11 @@ export function innerHTMLTransaction(transaction, index){
 
   const html = `
     <td class="descrição">
-        <input class="check" id="${index}" data-index="${index}" type="checkbox" />
+        
         ${transaction.description}
     </td>
     <td class="${cssClass}">${currencyMoney}</td>
-    <td class="date">${transaction.date}</td>
+    <td class="date">${transaction.date}<div><input class="check" id="${index}" data-index="${index}" type="checkbox" /> </div></td>
   `;
   
   

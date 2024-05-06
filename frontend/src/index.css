@@ -165,12 +165,13 @@ table td{
     text-align: center;
 }
 
-tabel thead tr th:first-child, table tbody tr tb:first-child{
-    border-radius: 0.25rem 0 0.25rem;
+table thead tr th:first-child, table tbody tr td:first-child{
+    border-radius: 0.25rem 0 0 0.25rem;
+   
 
 }
 
-table thead tr th:last-child, table tbody tr tb:last-child{
+table thead tr th:last-child, table tbody tr td:last-child{
     border-radius: 0 0.25rem 0.25rem 0;
 }
 
@@ -286,12 +287,23 @@ td.descrição{
     color: var(--titulo);
 
 }
-.check{
-   
-    margin-right: 0.8rem ;
+.date div{
+    margin: 0;
+    
+    
+    display: inline-block;
+    border-left: 0.1rem solid var(--texto);
+    margin-left: 0.9rem;
+
+
+}
+.date div .check{
+    margin-right: -10rem;
     
     text-align: center;
+
 }
+
 
 td.saida-coin{
     color: var(--red);
@@ -416,7 +428,34 @@ footer p img{
 /*responsividade*/
 
 
+@media (min-width: 350px){
+    .date div .check{
+        margin-right: -2.1rem;
+        
+       
+    
+    }
+    table thead tr th:first-child, table tbody tr td:first-child{
+        display: none;    
+    }
+
+
+    
+
+}
+
+
 @media (min-width: 600px){
+    .date div .check{
+        margin-right: -4rem;
+        
+       
+    
+    }
+    table thead tr th:first-child, table tbody tr td:first-child{
+        display: table-cell;    
+    }
+    
 
 
     #button-calc a {
@@ -432,6 +471,12 @@ footer p img{
 @media (min-width: 800px){
     html{
         font-size: 87.5%;
+    }
+    .date div .check{
+        margin-right: -6rem;
+        
+        text-align: center;
+    
     }
 
 
@@ -453,6 +498,12 @@ footer p img{
 }
 
 @media (min-width: 1100px){
+    .date div .check{
+        margin-right: -10rem;
+        
+        
+    
+    }
 
 
     #button-calc a {
