@@ -1,0 +1,147 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+:root{
+  --branco: #ffffff;
+  --blue-greeen: #2D4A22;
+  --orang-green: #49AA26;
+  --green: #49AA26;
+  --body: #F0F2F5;
+  --titulo: #363F5F;
+  --texto: #969CB2;
+  --red:  #E92929;
+  --green-a: #3dd705;
+}
+html{
+  font-family: 'Poppins', sans-serif;
+  font-size: 93.75%
+
+}
+
+
+
+
+.calc{
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.7);
+  position: fixed;
+  top: 0;
+  transition: 0.9s;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+
+
+
+}
+.calc.active{
+
+  opacity: 1;
+  visibility: visible;
+}
+
+.calc-modal{
+  background: var( --titulo);
+  padding: 2.4rem;
+  position: relative;
+  z-index: 1;
+  border-radius: 0.25rem;
+}
+
+
+#calc-form{
+  max-width: 500px;
+  max-height: 580px;
+  
+  display: block;
+  margin: auto;
+  
+}
+#calculator{
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--branco);
+  border-radius: 15px;
+  max-width: 500px;
+  
+  overflow: hidden;
+
+}
+
+#display{
+  width: 100%;
+  padding: 20px;
+  background-color: var(--branco);
+  color: var(--titulo);
+  font-size: 2.5rem;
+  text-align: left;
+  border: none;
+}
+
+#keys{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  padding: 25px;
+  /*p*/
+}
+
+
+
+.btn-calc{
+  width: 70px;
+  height: 70px;
+  border-radius: 50px;
+  color: var(--branco);
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  
+  background-color: black;
+  
+  
+  
+}
+.btn-calc:hover{
+  background-color: var(--texto);
+  
+  
+
+
+}
+.ope-btn{
+  background-color: hsl(35, 100%, 55%);
+}
+.ope-btn:hover{
+  background-color: hsl(35, 100%, 66%);
+}
+
+
+
+#close-calc img{
+  
+  margin-bottom: .2rem;
+  
+
+  text-align: center;
+
+
+  transition: 0.9s;
+  opacity: 0.4;
+  background: var(--red);
+
+  border: 1px solid var( --red);
+  padding: 1rem 1rem;
+  border-radius: 50rem;
+}#close-calc img:hover{
+  opacity: 1;
+  background: #ff8787;
+}
