@@ -3,10 +3,6 @@ export function FormatMoney(value) {
   return value;
 };
 
-export function FormatDate(date) {
-  const Date = date.split("-");
-  return `${Date[2]}/${Date[1]}/${Date[0]}`
-}
 
 
 
@@ -19,5 +15,16 @@ export default function FormatCurrencyMoney(value){
     currency: "BRL"
   });
   return signal + "" + value;
-
+  
 }
+
+
+
+
+
+export function FormatDate(date) {
+  const Date = date.split("-");
+  return `${Date[2]}${Date[1]}${Date[0]}`;
+  //
+}
+

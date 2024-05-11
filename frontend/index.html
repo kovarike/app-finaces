@@ -23,7 +23,7 @@
                 <div id="calc-form"> 
                     <a href="#" id="close-calc"><img src="./src/public/close.svg" alt="close"></a>
                     <div id="calculator">
-                        <input id="display" readonly disabled>
+                        <input id="display"  disabled>
                         <div id="keys">
                             <button class="btn-calc ope-btn" onclick="CalculatorFn('+')">+</button>
                             <button class="btn-calc" onclick="CalculatorFn('7')">7</button>
@@ -122,8 +122,11 @@
      </div>
 
      <footer><p><img src="./src/public/logo.svg" alt="logo">Finaces</p></footer>
+     <script type="module" src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+     
+     <script type="module" src="../frontend/src/api/api.js"></script>
 
-     <script type="module" src="./src/form.js"></script>
+     <script type="module" src="./src/submitForm.js"></script>
      <script src="./src/calculetor/calc.js "></script>
 
 

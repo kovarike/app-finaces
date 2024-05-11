@@ -1,9 +1,5 @@
-import DataTransaction from "./dataTransaction.js";
-
-
-
-
-const Saldo = {
+import DataTransaction from "./dataGetApi.js";
+const CalculoSaldo = {
   Entrada(){
     let income = 0
     DataTransaction.forEach(transaction => {
@@ -11,10 +7,6 @@ const Saldo = {
         income = income + transaction.money;
       }
     })
-
-
-
-
     return income;
   },
 
@@ -31,7 +23,7 @@ const Saldo = {
   },
 
   Total(){
-    return Saldo.Entrada() + Saldo.Saida()
+    return CalculoSaldo.Entrada() - CalculoSaldo.Saida()
     
   }
 
@@ -40,4 +32,4 @@ const Saldo = {
 
 };
 
-export default Saldo;
+export default CalculoSaldo;
