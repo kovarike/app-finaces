@@ -40,9 +40,7 @@ export async function PostApi(ValueData) {
 export async function DeleteApi(id) {
   try {
     const response = await axios.delete(`${Url}/${id}`);
-    const Data = response.data;
-    console.log(Data)
-    return Data
+    
   } catch (error) {
     console.log(error.response.data);
   }

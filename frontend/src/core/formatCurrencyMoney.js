@@ -1,5 +1,5 @@
 export function FormatMoney(value) {
-  value = Number(value) * 100;
+  value = Number(value);
   return value;
 };
 
@@ -9,7 +9,7 @@ export function FormatMoney(value) {
 export default function FormatCurrencyMoney(value){
   const signal = Number(value) < 0 ? "- " : "";
   value = String(value).replace(/\D/g, "");
-  value = Number(value) / 100;
+  value = Number(value);
   value = value.toLocaleString("pt-BR", {
     style: "currency",
     currency: "BRL"

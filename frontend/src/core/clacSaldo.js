@@ -23,7 +23,7 @@ const CalculoSaldo = {
   },
 
   Total(){
-    return CalculoSaldo.Entrada() - CalculoSaldo.Saida()
+    return CalculoSaldo.Saida() + CalculoSaldo.Entrada() 
     
   }
 
